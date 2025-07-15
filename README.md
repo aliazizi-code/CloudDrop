@@ -19,7 +19,7 @@ A simple Django application for managing files in an S3-compatible storage.
 
 1. Install dependencies:
    ```bash
-   pip install django boto3
+   pip install --no-cache-dir -r requirements.txt
    ```
 
 2. Configure your S3 settings in Django's `settings.py`:
