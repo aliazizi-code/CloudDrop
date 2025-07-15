@@ -47,4 +47,3 @@ A simple Django application for managing files in an S3-compatible storage.
 ## Error Handling
 
 All views return JSON responses with error messages when something goes wrong (status code 500 for server errors, 400 for bad requests).
-```
