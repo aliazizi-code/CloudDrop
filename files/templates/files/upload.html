@@ -1,0 +1,7 @@
+<h2>آپلود فایل به S3</h2>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="file" required>
+    <button type="submit">آپلود</button>
+</form>
+<a href="{% url 'file_list' %}">لیست فایل‌ها</a>

@@ -1,0 +1,15 @@
+<h2>فایل‌های S3</h2>
+<ul>
+  {% for file in files %}
+    <li>
+      {{ file }}
+      <form method="post" action="{% url 'delete_file' %}" style="display:inline;">
+        {% csrf_token %}
+        <input type="hidden" name="file_name" value="{{ file }}">
+        <button type="submit">❌ حذف</button>
+      </form>
+      <a href="{% url 'generate_presigned_url' %}?file_name={{ file }}" target="_blank">⬇️ دانلود</a>
+    </li>
+  {% endfor %}
+</ul>
+<a href="{% url 'upload_file' %}">برگشت به آپلود</a>
